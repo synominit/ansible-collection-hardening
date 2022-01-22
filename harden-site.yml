@@ -1,0 +1,11 @@
+---
+- name: harden os
+  hosts: harden
+  become: yes
+  vars:
+    sshd_authenticationmethods: ['publickey', 'password']
+    ssh_client_password_login: true
+    ssh_server_password_login: true
+  roles:
+    - role: 'ansible-collection-hardening/roles/os_hardening'
+    - role: 'ansible-collection-hardening/roles/ssh_hardening'
