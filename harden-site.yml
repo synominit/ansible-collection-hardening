@@ -3,5 +3,5 @@
   hosts: harden
   become: yes
   roles:
-    - role: 'ansible-collection-hardening/roles/os_hardening'
-    - role: 'ansible-collection-hardening/roles/ssh_hardening'
+    - role: 'roles/os_hardening'
+    - role: 'roles/ssh_hardening'
