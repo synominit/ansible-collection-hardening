@@ -1,0 +1,6 @@
+---
+- name: harden nginx servers
+  hosts: all
+  become: yes
+  roles:
+    - role: 'roles/nginx_hardening'

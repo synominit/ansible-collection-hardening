@@ -1,0 +1,7 @@
+---
+- name: harden os
+  hosts: all
+  become: yes
+  roles:
+    - role: 'roles/os_hardening'
+    - role: 'roles/ssh_hardening'
