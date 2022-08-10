@@ -1,0 +1,8 @@
+---
+all:
+  hosts:
+    localhost:
+      ansible_connection: local
+    kasm.skyelp.net:
+      sysctl_overwrite:
+        net.ipv4.ip_forward: 1

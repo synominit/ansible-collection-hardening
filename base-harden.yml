@@ -2,6 +2,9 @@
 - name: harden os
   hosts: all
   become: yes
+  vars:
+    os_auth_pw_max_age: 99999
+    ufw_enable_ipv6: no
   roles:
     - role: 'roles/os_hardening'
     - role: 'roles/ssh_hardening'
