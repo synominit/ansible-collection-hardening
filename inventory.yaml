@@ -3,6 +3,11 @@ all:
   hosts:
     localhost:
       ansible_connection: local
-    kasm.skyelp.net:
+  children:
+    docker_hosts:
+      hosts:
+        kasm.skyelp.net:
+        www.dev.skyelp.net:
+    vars:
       sysctl_overwrite:
         net.ipv4.ip_forward: 1
